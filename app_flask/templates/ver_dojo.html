@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <section>
+            <div>
+                {{dojo.nombre}}
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ninja in lista_ninjas %}
+                            <tr>
+                                <td>{{ninja.first_name}} </td>
+                                <td>{{ninja.last_name}}</td>
+                                <td>{{ninja.age}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h2><a href="{{ url_for('dojos') }}">Home</a></h2>
+            </div>
+        </section>
+    </body>
+</html>
